@@ -1,0 +1,131 @@
+/* ✅ Dark Theme + Glassmorphism + Neumorphism */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #121212;
+    margin: 20px;
+    color: #ddd;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Input Section */
+.input-section {
+    margin-bottom: 30px;
+}
+
+#input-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.05);
+    outline: none;
+    color: #ddd;
+    font-weight: 500;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ Buttons */
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Table Section */
+.table-container {
+    max-height: 350px;
+    overflow-y: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+th {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: white;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    #input-fields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

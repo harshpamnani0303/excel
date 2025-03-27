@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Data Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Excel Data Manager</h1>
+        
+        <div class="input-section">
+            <h2>Enter Data (A-Z)</h2>
+            <div id="input-fields"></div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="saveToExcel()">Save to Excel</button>
+            <input type="file" id="fileInput" accept=".xlsx" onchange="loadExcelData(event)">
+            <button onclick="clearFields()">Clear Fields</button>
+        </div>
+
+        <h2>Loaded Excel Data</h2>
+        <div class="table-container">
+            <table id="excelTable">
+                <thead><tr></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
